@@ -1,0 +1,107 @@
+.Menu {
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--main-color);
+    h1 {
+      color: white;
+    }
+  }
+  .center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    &:hover .btn {
+      opacity: 1;
+    }
+    .btn {
+      opacity: 0;
+      color: white;
+      border: 1px solid var(--main-color);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: 0.5s;
+      cursor: pointer;
+      &:hover {
+        color: var(--main-color);
+        border: 1px solid white;
+      }
+    }
+    .types {
+      display: flex;
+      width: 90%;
+      gap: 10px;
+      overflow: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      scrollbar-width: none;
+      .type {
+        min-width: 220px;
+        height: 25px;
+        padding: 15px 5px;
+        border: 1px solid var(--main-color);
+        font-size: 20px;
+        color: white;
+        font-family: "Gilda Display", serif;
+        text-align: center;
+        cursor: pointer;
+        @media (max-width: 950px) {
+          min-width: 120px;
+          height: 25px;
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    @media (max-width: 950px) {
+      flex-direction: column;
+    }
+    .side {
+      min-width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 20px;
+      @media (max-width: 950px) {
+        width: 100%;
+      }
+      .food {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 20px;
+        color: #adadad;
+        font-family: "Gilda Display", serif;
+        h3 {
+          color: var(--main-color);
+        }
+        .price {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px dashed var(--main-color);
+          padding: 5px 0;
+        }
+        p {
+          color: #adadad;
+        }
+      }
+    }
+  }
+}

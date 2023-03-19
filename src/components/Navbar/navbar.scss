@@ -1,0 +1,93 @@
+.Navbar{
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: transparent;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.5s;
+    a.active{
+        color: var(--main-color);
+    }
+    
+    .menu{
+        display: none !important;
+        color: white;
+        transition: 1s;
+        @media (max-width: 900px) {
+            display: inline-block !important;
+        }
+        &:hover{
+            color: var(--main-color);
+        }
+    }
+    .left{
+        width: 160px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        @media (max-width: 900px) {
+            display: none;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+            transition: 1s;
+            
+            @media (max-width: 900px) {
+                color: black;
+            }
+
+    
+            &:hover{
+                color: var(--main-color);
+            }
+            
+        }
+        
+    }
+    .smallMenu{
+        transition: 1s;
+        display: flex;
+        position: absolute;
+        top: 90px;
+        width: 50%;
+        background-color: white;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        border: 3px solid var(--main-color);
+        .item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 17px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: black;
+            transition: 1s;
+            &:hover{
+                color: var(--main-color);
+            }
+        }
+    }
+}

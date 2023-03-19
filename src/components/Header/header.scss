@@ -1,0 +1,95 @@
+.Header{
+    height: 100vh;
+    background: url("./../../../public/images/2.jpg");
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .left{
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        @media (max-width:1050px) {
+            display: none;
+    }
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: rotateZ(-90deg);
+            span{
+                font-family: 'Barlow Condensed', sans-serif;
+                letter-spacing: 2px;
+                color: white;
+            }
+            p{
+                font-family: 'Gilda Display', serif;
+                font-size: 22px;
+                color: var(--main-color);
+            }
+        }
+        .phone{
+            cursor: pointer;
+            transition: 0.5s;
+            margin: auto;
+            width: fit-content;
+            border-radius: 50%;
+            border: 1px solid var(--main-color);
+            padding: 10px 12px;
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            &:hover{
+                border-color: white;
+                color: var(--main-color);
+            }
+        }
+    }
+    .center{
+        
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        .stars{
+            color: #e4a853;
+        }
+        p{
+            font-family: 'Barlow Condensed', serif;
+            font-size: 15px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: white;
+            
+        }
+        h1{
+            font-family: 'Gilda Display', serif;
+            font-size: 55px;
+            text-transform: uppercase;
+            line-height: 1.35em;
+            letter-spacing: 15px;
+            text-align: center;
+            color: white;
+            @media (max-width:900px) {
+                font-size: 40px;
+            }
+            @media (max-width:676px) {
+                font-size: 30px;
+            }
+        }
+        
+    }
+    .right{
+        flex: 1;
+        @media (max-width:1050px) {
+                display: none;
+        }
+    }
+}

@@ -1,0 +1,169 @@
+.Slider{
+    background-color: var(--black);
+    display: flex;
+    gap: 25px;
+    position: relative;
+
+    @media (max-width:1050px) {
+        flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+    }
+    @media (max-width:676px) {
+        padding-bottom: 100px !important;       
+    }
+    .left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        
+        @media (max-width:1050px) {
+            text-align: center;
+        }
+        .stars{
+            color: var(--golden);
+        }
+        p{
+            color: var(--main-color);
+        }
+        h1{
+            color: white;
+        }
+        span{
+            color: white;
+            
+        }
+        .hide{
+            @media (max-width:676px) {
+                display: none;
+            }
+        }
+        .call{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            @media (max-width:1050px) {
+                justify-content: center;
+            }
+            .phone{
+                color: var(--main-color);
+            }
+            .text{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                p{
+                    color: white;
+                    letter-spacing: 2px;
+                }
+                span{
+                    letter-spacing: 1px !important;
+                    font-size: 24px !important;
+                    color: var(--main-color);
+                    font-family: 'Gilda Display', serif;
+                    
+                }
+            }
+        }
+
+    }
+    .right{
+        scrollbar-width:none ;
+        flex: 2;
+        overflow-x: scroll;
+        display: flex;
+        gap: 25px;
+        @media (max-width:1050) {
+            flex: 1;
+        }
+        .card{
+            width: 350px;
+            background-color: white;
+            .image{
+                width: 350px;
+                img{
+                    width: 100%;
+                }
+            }
+            .text{
+                margin-top: 0;
+                background-color: white;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                h2{
+                    font-family: 'Gilda Display', serif;
+                    font-size: 24px;
+                    color: var(--black);
+                }
+                .price{
+                    font-size: 20px;
+                    color: var(--pale);
+                    span{
+                        font-family: 'Gilda Display', serif;
+                        color: var(--main-color);
+                        font-size: 40px;
+                        padding: 0 10px;
+
+                    }
+                }
+                .details{
+                    display: flex;
+                    gap: 10px;
+                    color: var(--pale);
+                    .icon{
+                        color: var(--main-color);
+                    }
+                }
+            }
+        }
+    }
+    .icons{
+        position: absolute;
+        bottom: 30px;
+        right: 300px;
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        
+        @media (max-width:1050px) {
+            align-items: center;
+            right: 50%;
+            transform: translate(50%,50%);
+            bottom: 50px;
+            
+        }
+        @media (max-width:676px) {
+            
+        }
+        .left1{
+            border: 1px solid var(--main-color);
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid white;
+                color: var(--main-color);
+            }
+        }
+        .right2{
+            border: 1px solid var(--main-color);
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid white;
+                color: var(--main-color);
+            }
+        }
+    }
+}

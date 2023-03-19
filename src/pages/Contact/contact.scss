@@ -1,0 +1,62 @@
+.Contact{
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        p{
+            color: var(--pale);
+        }
+        .calls{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            @media (max-width:950px) {
+                justify-content: center;
+            }
+            .call{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                @media (max-width:1050px) {
+                    justify-content: center;
+                }
+                .phone{
+                    color: var(--main-color);
+                    font-size: 30px;
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    span{
+                        letter-spacing: 1px !important;
+                        font-size: 24px !important;
+                        color: var(--main-color);
+                        font-family: 'Gilda Display', serif;  
+                    }
+                }
+            }
+        }
+    }
+    .map{
+        min-width: calc(100% - 200px);
+        iframe{
+            width: 100%;
+            height: 100vh;
+            filter: grayscale(1);
+            transition: 0.3s;
+            @media (max-width:950px) {
+                height: 50vh;
+            }
+            &:hover{
+                filter: grayscale(0);
+            }
+        }
+    }
+}

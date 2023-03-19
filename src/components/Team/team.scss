@@ -1,0 +1,101 @@
+.Team{
+    background: #f8f5f0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .head{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: var(--pale);
+        h1{
+            color: var(--black);
+        }
+    }
+    .cards{
+        display: flex;
+        gap: 20px;
+        overflow-x:scroll ;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        scrollbar-width: none;
+        .card{
+            min-width: 350px;
+            position: relative;
+            background-color: white;
+            overflow: hidden;
+            &:hover .hide{
+                bottom: 0px;
+            }
+            .image{
+                width: 350px;
+                img{
+                    width: 100%;
+                }
+            }
+            .text{
+                padding:30px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 15px;
+                h1{
+                    font-family: 'Gilda Display', serif;
+                    font-weight: 400;
+                    font-size: 20px;
+                }
+                p{
+                    color: var(--pale);
+                }
+            }
+            .hide{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding: 30px 0;
+                position: absolute;
+                bottom: -125px;
+                left: 0;
+                right: 0;
+                margin:0 auto;
+                width: 100%;
+                text-align: center;
+                background-color: white;
+                transition: 0.5s;
+                .icons{
+                    font-size: 20px;
+                    color: var(--main-color);
+                    display: flex;
+                    gap: 5px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .buttons{
+        color: var(--main-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        .btn{
+            padding: 10px;
+            border-radius: 50%;
+            border: 1px solid var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                border: 1px solid var(--main-color);
+                color: var(--black);
+            }
+        }
+    }
+}

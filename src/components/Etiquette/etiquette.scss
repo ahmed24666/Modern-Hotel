@@ -1,0 +1,45 @@
+.Etiquette{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #f8f5f0;
+    .head{
+        padding:0 0 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: var(--pale);
+        h1{
+            color: var(--black);
+        }
+    }
+    .card{
+        padding: 20px 40px;
+        background-color: white;
+        // border: 1px solid var(--main-color);
+        
+        .top{
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h1{
+                font-family: 'Gilda Display', serif;
+                font-size: 24px;
+                color: var(--main-color);
+            }
+            .icon{
+                color: var(--main-color);
+                font-size: 24px;
+                
+            }
+        }
+        .hide{
+            padding-top: 20px;
+            p{
+                color: var(--pale);
+            }
+
+        }
+    }
+}

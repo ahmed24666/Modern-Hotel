@@ -1,0 +1,82 @@
+:root{
+    --main-color:#aa8453;
+    --pale:#666;
+    --golden:#e4a853;
+    --black:#222;
+}
+
+.app{
+    width: 100%;
+    overflow-x:hidden ;
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    .header-bg{
+        background-color: rgba(0, 0, 0, 0.747);
+    }
+    .routeLink{
+        text-decoration: none;
+        color: inherit;
+    }
+    .fullScreen{
+        padding: 0 50px;
+    }
+    .container{
+        padding: 100px;
+    }
+    @media (max-width:676px) {
+        .container{
+            padding: 30px;
+        }
+    }
+    .main-p{
+        font-size: 15px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+    }
+    .main-h1{
+        font-size: 45px;
+        font-family: 'Gilda Display', serif;
+        @media (max-width:676px) {
+            font-size: 35px;
+        }
+    }
+    .para{
+            font-family: 'Barlow', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 25px;
+    }
+    .recbtn{ 
+        cursor: pointer;
+        padding: 15px 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        font-family: 'Barlow Condensed', serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        position: relative;
+        transition: 0.5s;
+        z-index: 1;
+        &::before{
+            content: '';
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 0px;
+            height: 100%;
+            background-color: var(--main-color);
+            z-index: -1;
+            transition: 0.5s;
+        }
+        &:hover::before{
+            width: 100%;
+        }
+        
+    }
+}

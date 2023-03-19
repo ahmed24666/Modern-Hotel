@@ -1,0 +1,270 @@
+.Rooms{
+    background-color: #f8f5f0;
+    .head{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        p{
+            color: var(--pale);
+        }
+        h1{
+            color: var(--black);
+        }
+    }
+    .row1{
+        padding-top: 20px;
+        display: flex;
+        gap: 20px;
+        @media (max-width:676px) {
+            flex-direction: column;
+        }
+        .card-r1{
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            &:hover .image img{
+                transform: scale(1.1);
+            }     
+            &:hover .image::before{
+                background-color: rgba(0, 0, 0, 0.35);
+            }
+            &:hover .details{
+                bottom: 30px;
+            }          
+            &:hover .details hr{
+                width: 90%;
+            }
+            .image{
+                width: 350px;
+                max-height: 470px;
+                position: relative;
+                overflow: hidden;
+                @media (max-width:1050px) {
+                    width: 300px;
+                }
+                @media (max-width:860px) {
+                    width: 240px;
+                }
+                @media (max-width:676px) {
+                    width: 540px;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.226);
+                    z-index: 2;
+                    transition: 0.5s;
+                    
+                }
+                img{
+                    transition: 0.5s;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .details{
+                z-index: 3;
+                padding: 0 20px;
+                position: absolute;
+                bottom: -30px;
+                color: white;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                transition: 0.5s;
+                hr{
+                    background-color: white;
+                    border:none;
+                    height: 1px;
+                    width: 40%;
+                    transition: 0.5s;
+                }
+                p{
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
+                h2{
+                    color: #fff;
+                    font-size: 27px;
+                }
+                .hidden{
+                    padding-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    .icons{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 15px;
+                        @media (max-width:950px) {
+                            display: none;
+                        }
+                    }
+                    .right{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        font-family: 'Barlow Condensed', sans-serif;
+                        font-size: 15px;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                        padding-left: 5px;
+                        &:hover{
+                            color: var(--main-color);
+                        }
+                    }
+                }
+            }
+            .book{
+                z-index: 5;
+                cursor: pointer;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                transform: rotateZ(-90deg);
+                padding: 5px 10px;
+                border: 1px solid white;
+                color: white;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 3px;
+                font-family: 'Barlow Condensed', sans-serif;
+            }
+        }
+    }
+    .row2{
+        padding-top: 20px;
+        display: flex;
+        gap: 20px;
+        @media (max-width:676px) {
+            flex-direction: column;
+        }
+        .card-r2{
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            
+            &:hover .image img{
+                transform: scale(1.1);
+            }     
+            &:hover .image::before{
+                background-color: rgba(0, 0, 0, 0.35);
+            }
+            &:hover .details{
+                bottom: 30px;
+            } 
+            &:hover .details hr{
+                width: 90%;
+            }
+            .image{
+                width: 550px;
+                position: relative;
+                overflow: hidden;
+                max-height: 470px;
+                @media (max-width:1050px) {
+                    width: 480px;
+                }
+                @media (max-width:860px) {
+                    width: 360px;
+                }
+                @media (max-width:676px) {
+                    width: 540px;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.226);
+                    z-index: 2;
+                    transition: 0.5s;
+                }
+                img{
+                    transition: 0.5s;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .details{
+                z-index: 3;
+                padding: 0 20px;
+                position: absolute;
+                bottom: -25px;
+                color: white;
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                transition: 0.5s;
+                hr{
+                    width: 40%;
+                    border: 0.5px solid white;
+                    outline: none;
+                    transition: 0.5s;
+                }
+                p{
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                }
+                h2{
+                    color: #fff;
+                    font-size: 27px;
+                }
+                .hidden{
+                    padding-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    .icons{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 15px;
+                        @media (max-width:950px) {
+                            display: none;
+                        }
+                    }
+                    .right{
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        font-family: 'Barlow Condensed', sans-serif;
+                        font-size: 15px;
+                        letter-spacing: 3px;
+                        text-transform: uppercase;
+                        transition: 0.5s;
+                        padding-left: 5px;
+                        &:hover{
+                            color: var(--main-color);
+                        }
+                    }
+                }
+            }
+            .book{
+                z-index: 5;
+                cursor: pointer;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                transform: rotateZ(-90deg);
+                padding: 5px 10px;
+                border: 1px solid white;
+                color: white;
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: 3px;
+                font-family: 'Barlow Condensed', sans-serif;
+            }
+        }
+
+    }
+}

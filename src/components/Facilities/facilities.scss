@@ -1,0 +1,46 @@
+.Facilities{
+    .head{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: var(--pale);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: var(--black);
+        }
+    }
+    .cards{
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 20px;
+        justify-content: space-evenly;
+        .card{
+            max-width: 330px;
+            min-width: 300px;
+            padding: 25px 15px;
+            border: 1px solid var(--main-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .icon{
+                font-size: 50px;
+                color: var(--main-color);
+            }
+            h1{
+                font-family: 'Gilda Display', serif;
+                font-weight: 400;
+                font-size: 24px;
+            }
+            p{
+                padding-top: 15px;
+                color: var(--pale);
+            }
+        }
+    }
+}
