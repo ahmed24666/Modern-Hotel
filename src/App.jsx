@@ -14,12 +14,11 @@ import Loader from "./components/Loader/Loader";
 function App() {
   const Layout =()=>{
 
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
-        setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 4000);
+        }, 2500);
     }, [])
     return(
       <div className="app">
